@@ -1,24 +1,20 @@
 import express from "express";
-import {
-  getAll,
-  getOne,
-  createOne,
-  updateOne,
-  deleteOne,
-} from "../controllers/controller.users.js";
+import { getProducts } from "../controllers/controller.users.js";
 
-const router = express.Router();
+const user = express.Router();
 
 // CRUD
 
-router.get("/", getAll);
+// router.get("/", getAll);
 
-router.get("/:id", getOne);
 
-router.post("/", createOne);
 
-router.put("/", updateOne);
+// router.get("/:id", getOne);
 
-router.delete("/:id", deleteOne);
+// router.post("/", createOne);
 
-export default router;
+// router.put("/", updateOne);
+
+// router.delete("/:id", deleteOne);
+
+export default user;

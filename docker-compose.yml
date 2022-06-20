@@ -5,9 +5,12 @@ services:
     image: boiler-plate:1.0.0
     build: .
     ports:
-      - "5000:5000"
+      - "5001:5001"
+    volumes:
+      - .:/app
+      - /app/node_modules 
     environment:
-      - EXTERNAL_PORT=5000
+      - EXTERNAL_PORT=5001
       - PGUSER=abhiram
       - PGPASSWORD=12345
       - PGDATABASE=boiler_db
@@ -25,7 +28,6 @@ services:
       - POSTGRES_PASSWORD=12345
       - POSTGRES_DB=boiler_db
     volumes:
-      - boiler_data:/var/lib/postgresql/database
+      - ./data:/var/lib/postgresql/data
 
-volumes:
-  boiler_data: {}
+
