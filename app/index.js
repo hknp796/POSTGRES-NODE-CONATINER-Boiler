@@ -12,7 +12,7 @@ app.use("/users", router);
     await sequelize.sync({
       force: false,
     });
-    app.listen(process.env.EXTERNAL_PORT || 5000);
+    app.listen(process.env.EXTERNAL_PORT || 4000);
   } catch (error) {
     console.log(error);
   }
