@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import sequelize from "./utils/utils.database.js";
-// import router from "./routes/route.user.js";
 import product from "./routes/route.product.js";
 
 const app = express();
